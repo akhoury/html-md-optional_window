@@ -1,7 +1,10 @@
 # IMPORTANT
 this is a temporary __manual__ fork of the original repo [/neocotic/html.md](https://github.com/neocotic/html.md),
-the reason it's not a regular fork (as [this](https://github.com/akhoury/html.md/tree/optional_window)) is because I had to build all the files and commit them back to github to use them, while I am waiting for
-this [pull#43](https://github.com/neocotic/html.md/pull/43) to be merged. Once it is, I will deprecate this repo, and delete it in the near future.
+the reason it's not a regular fork (as [this](https://github.com/akhoury/html.md/tree/optional_window)) is because I had to build all the files and commit them back to github to use them, and the original repo's contribution guide prevents built files from being commit in a pull request, so I am waiting for
+this [pull#43](https://github.com/neocotic/html.md/pull/43) to be merged, built and published, once it is, I will deprecate this repo, and delete it in the near future.
+
+
+
 
 
      __      __               ___                      __
