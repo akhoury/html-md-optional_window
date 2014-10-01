@@ -16,7 +16,7 @@ DEFAULT_OPTIONS   =
   debug:    no
   inline:   no
 # require jsdom if there is no window object
-JS_DOM = unless window? then require('jsdom') else null
+JS_DOM = unless window? then require('jsdom-nogyp') else null
 # Save the previous value of the global `md` variable for *noConflict* mode.
 PREVIOUS_MD       = @md
 # Map of replacement strings for *special* Markdown characters.
@@ -149,7 +149,7 @@ class HtmlParser
       doc  = JS_DOM.jsdom null, null,
         features: FetchExternalResources: no
         url:      @options.base
-      @win = doc.createWindow()
+      @win = doc.parentWindow
 
     # Create the Node constants if Node doesn't exist (i.e. when running in IE < 9).
     unless @win.Node?
