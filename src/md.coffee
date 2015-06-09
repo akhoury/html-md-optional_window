@@ -435,12 +435,11 @@ class HtmlParser
                 do after2
             # Block quotes (and similar elements) are relatively straight forward.
             when 'BLOCKQUOTE', 'DD'
-              quoteMd = '> '
               # Special case for Vanilla blockquotes with the "rel" attr
               if @has ele, 'rel', no
                 rel = @attr ele, 'rel', @options.absolute
-                quoteMd = "@#{rel} said:\n" + quoteMd
-              after = @pushLeft quoteMd
+                @append "@#{rel} said:\n"
+              after = @pushLeft '> '
             # Links on the other hand are probably the trickiest.
             when 'A'
               # Extract the link URL from `ele`.
