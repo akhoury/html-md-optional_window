@@ -131,6 +131,7 @@ class HtmlParser
     @exceptions = []
     @order      = 1
     @listDepth  = 0
+    @quoteDepth = 0
     @inCode     = @inPre  = @inOrderedList = no
     @last       = null
     @left       = '\n'
@@ -438,8 +439,12 @@ class HtmlParser
               # Special case for Vanilla blockquotes with the "rel" attr
               if @has ele, 'rel', no
                 rel = @attr ele, 'rel', @options.absolute
-                @append "@#{rel} said:\n"
+                auth = "@#{rel} said:\n"
+                @append padLeft auth, @quoteDepth, "> "
+              @quoteDepth++
               after = @pushLeft '> '
+              =>
+                @quoteDepth--
             # Links on the other hand are probably the trickiest.
             when 'A'
               # Extract the link URL from `ele`.
