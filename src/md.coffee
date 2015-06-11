@@ -438,7 +438,7 @@ class HtmlParser
               # Special case for Vanilla blockquotes with the "rel" attr
               if @has ele, 'rel', no
                 rel = @attr ele, 'rel', @options.absolute
-                @output '@#{rel} said:'
+                @output "@#{rel} said:"
               after = @pushLeft '> '
             # Links on the other hand are probably the trickiest.
             when 'A'
