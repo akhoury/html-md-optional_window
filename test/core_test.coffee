@@ -42,7 +42,6 @@ exports.fixtures = (
     for file in fs.readdirSync FIXTURES_DIR when HTML_EXT is path.extname file
       path.basename file, HTML_EXT
   )
-
   tests = {}
   tests[fixture] = testFixture fixture for fixture in fixtures
   tests

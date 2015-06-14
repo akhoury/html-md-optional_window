@@ -41,6 +41,8 @@ wbr
 
 > blockquote
 
+>! spoiler
+
 **dt**
 
 > dd
