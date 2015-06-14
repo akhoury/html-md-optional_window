@@ -440,6 +440,9 @@ class HtmlParser
                 rel = @attr ele, 'rel', @options.absolute
                 @output "@#{rel} said:"
               after = @pushLeft '> '
+            # very similar to blockquote, but outputs markdown that is in a format for https://github.com/psychobunny/nodebb-plugin-spoilers
+            when 'SPOILER'
+              after = @pushLeft '>! '
             # Links on the other hand are probably the trickiest.
             when 'A'
               # Extract the link URL from `ele`.
@@ -577,7 +580,7 @@ else if typeof define is 'function' and define.amd
 # ----------------
 
 # Current version of html.md.
-md.version = md.VERSION = '3.0.2'
+md.version = md.VERSION = '3.0.4'
 
 # Public functions
 # ----------------
