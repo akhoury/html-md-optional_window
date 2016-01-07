@@ -1,6 +1,6 @@
 
-# Actually:
-No longer maintaining this one, and the original repo doesn't seem to be active anymore, so I compiled it in JS and maintaining it that way, here: https://github.com/akhoury/html-md.js k10xbai.
+# NO LONGER MAINTAINED!
+switched to [to-markdown](https://github.com/domchristie/to-markdown)
 
 ## ~~IMPORTANT~~
 this ~~is~~ was a temporary __manual__ fork of the original repo [/neocotic/html.md](https://github.com/neocotic/html.md),
